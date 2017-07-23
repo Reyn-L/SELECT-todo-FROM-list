@@ -46,6 +46,7 @@ UPDATE tasks SET completed_at = NOW() WHERE title = 'Study SQL';
 -- select all titles and descriptions of tasks that are not yet completed
 SELECT title, description FROM tasks WHERE tasks IS NULL;
 -- select all fields of every task sorted by creation date in descending order
+SELECT * FROM tasks ORDER BY created_at DESC;
 -- create a new task
 -- title = 'mistake 1'
 -- description = 'a test entry'
