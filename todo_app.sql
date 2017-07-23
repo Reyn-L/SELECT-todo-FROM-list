@@ -22,7 +22,7 @@ completed bool NOT NULL
 -- remove the column named completed
 ALTER TABLE tasks DROP COLUMN IF EXISTS completed;
 -- add a column to tasks named completed_at:timestamp, that may be NULL, and has a default value of NULL.
-ALTER TABLE tasks ADD IF NOT EXISTS completed_at timestamp without time zone;
+ALTER TABLE tasks ADD IF NOT EXISTS completed_at timestamp without time zone DEFAULT NULL;
 -- change the updated_at column to not allow NULL values, and have a default value of now()
 ALTER TABLE tasks ALTER updated_at SET NOT NULL;
 ALTER TABLE tasks ALTER updated_at SET DEFAULT NOW();
