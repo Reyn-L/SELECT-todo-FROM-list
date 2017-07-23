@@ -50,12 +50,18 @@ SELECT * FROM tasks ORDER BY created_at DESC;
 -- create a new task
 -- title = 'mistake 1'
 -- description = 'a test entry'
+INSERT INTO tasks (title, description)
+VALUES('mistake 1', 'a test entry');
 -- create a new task
 -- title = 'mistake 2'
 -- description = 'another test entry'
+INSERT INTO tasks (title, description)
+VALUES('mistake 2', 'another test entry');
 -- create a new task
 -- title = 'third mistake'
 -- description = 'another test entry'
+INSERT INTO tasks (title, description)
+VALUES('third mistake', 'another test entry');
 -- select title fields of all tasks with a title that includes the word 'mistake'
 -- delete the task that has a title of mistake 1
 -- select title and description fields of all tasks with a title that includes the word 'mistake'
