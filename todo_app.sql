@@ -40,8 +40,11 @@ VALUES(DEFAULT,'Study SQL', 'Complete this exercise', NOW(), NOW(), NULL);
 INSERT INTO tasks (title, description)
 VALUES('Study PostgreSQL', 'Read all the documentation');
 -- select all the titles of tasks that are not yet completed
+SELECT title FROM tasks WHERE completed_at IS NULL;
 -- update the task with a title of 'Study SQL' to be completed as of now
+UPDATE tasks SET completed_at = NOW() WHERE title = 'Study SQL';
 -- select all titles and descriptions of tasks that are not yet completed
+SELECT title, description FROM tasks WHERE tasks IS NULL;
 -- select all fields of every task sorted by creation date in descending order
 -- create a new task
 -- title = 'mistake 1'
